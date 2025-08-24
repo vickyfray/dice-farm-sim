@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cab6egd47js7q"]
+[gd_scene load_steps=4 format=3 uid="uid://cab6egd47js7q"]
 
 [ext_resource type="Texture2D" uid="uid://ofubvak5x2sp" path="res://assets/images/backdrop.png" id="1_888q2"]
 [ext_resource type="Texture2D" uid="uid://cfyelivq48vhv" path="res://assets/images/top-bar.png" id="2_cdo5m"]
+[ext_resource type="PackedScene" uid="uid://cm27f41afdxil" path="res://plant_pot.tscn" id="3_huqx6"]
 
 [node name="Main" type="Node2D"]
 
@@ -50,3 +51,36 @@ offset_top = 8.0
 offset_right = 1145.0
 offset_bottom = 44.0
 text = "SHOP"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+layout_direction = 2
+offset_left = 1.0
+offset_top = 111.0
+offset_right = 486.0
+offset_bottom = 679.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 0
+scroll_deadzone = 30
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ScrollContainer"]
+custom_minimum_size = Vector2(20, 20)
+layout_direction = 2
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="PlantPot" parent="CanvasLayer/ScrollContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
+layout_mode = 2
+
+[node name="PlantPot2" parent="CanvasLayer/ScrollContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
+layout_mode = 2
+
+[node name="PlantPot3" parent="CanvasLayer/ScrollContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
+layout_mode = 2
+
+[node name="PlantPot4" parent="CanvasLayer/ScrollContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
+layout_mode = 2

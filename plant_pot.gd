@@ -6,7 +6,7 @@ extends TextureRect
 		plant_texture = value
 		if plant:
 			plant.texture = value
-@onready var plant = $Plant
+@onready var plant = $PlantImage
 
 func _ready():
 	if plant and plant_texture:
