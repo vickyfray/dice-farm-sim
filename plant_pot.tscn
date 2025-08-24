@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm27f41afdxil"]
+
+[ext_resource type="Script" path="res://plant_pot.gd" id="1_3td4i"]
+[ext_resource type="Texture2D" uid="uid://dy511dfwq2iq1" path="res://assets/images/pot.png" id="1_ntgyw"]
+[ext_resource type="Texture2D" uid="uid://dryijhm5joisc" path="res://assets/images/plant-stage1.png" id="3_g0ofb"]
+
+[sub_resource type="Theme" id="Theme_vp2dj"]
+
+[node name="PlantPot" type="TextureRect"]
+offset_right = 196.0
+offset_bottom = 443.0
+theme = SubResource("Theme_vp2dj")
+expand_mode = 2
+script = ExtResource("1_3td4i")
+
+[node name="Pot" type="Sprite2D" parent="."]
+position = Vector2(97.5, 377.5)
+texture = ExtResource("1_ntgyw")
+
+[node name="Plant" type="Sprite2D" parent="."]
+position = Vector2(96.5, 169.5)
+texture = ExtResource("3_g0ofb")
