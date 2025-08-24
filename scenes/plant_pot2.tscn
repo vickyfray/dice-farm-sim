@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6d312ggdnn8d"]
+
+[ext_resource type="Script" path="res://scripts/plant_pot.gd" id="1_nqvok"]
+[ext_resource type="Texture2D" uid="uid://dy511dfwq2iq1" path="res://assets/images/pot.png" id="2_1nuel"]
+[ext_resource type="Texture2D" uid="uid://dryijhm5joisc" path="res://assets/images/plant-stage1.png" id="3_6g5im"]
+[ext_resource type="Texture2D" uid="uid://du7u50nh7nx3b" path="res://assets/images/pot_hover.png" id="3_41r6o"]
+[ext_resource type="Texture2D" uid="uid://bloo4122engp0" path="res://assets/images/pot_click.png" id="3_k5ki2"]
+
+[sub_resource type="Theme" id="Theme_vp2dj"]
+
+[node name="PlantPot" type="TextureRect"]
+offset_right = 196.0
+offset_bottom = 443.0
+theme = SubResource("Theme_vp2dj")
+expand_mode = 2
+script = ExtResource("1_nqvok")
+
+[node name="Pot" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 316.0
+offset_right = 173.0
+offset_bottom = 439.0
+texture_normal = ExtResource("2_1nuel")
+texture_pressed = ExtResource("3_k5ki2")
+texture_hover = ExtResource("3_41r6o")
+
+[node name="Plant" type="Sprite2D" parent="."]
+position = Vector2(96.5, 169.5)
+texture = ExtResource("3_6g5im")
