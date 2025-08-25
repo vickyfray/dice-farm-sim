@@ -1,13 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://m24acdqdq7le"]
+[gd_scene load_steps=5 format=3 uid="uid://cab6egd47js7q"]
 
+[ext_resource type="PackedScene" uid="uid://mqepdpvjcqva" path="res://scenes/shoppe.tscn" id="1_7uyrq"]
 [ext_resource type="Texture2D" uid="uid://ofubvak5x2sp" path="res://assets/images/backdrop.png" id="1_888q2"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_gwtfa"]
 [ext_resource type="Texture2D" uid="uid://cfyelivq48vhv" path="res://assets/images/top-bar.png" id="2_cdo5m"]
 [ext_resource type="Script" path="res://scripts/another.gd" id="3_14bsv"]
 [ext_resource type="PackedScene" uid="uid://cm27f41afdxil" path="res://scenes/plant_pot.tscn" id="3_huqx6"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_gwtfa")
+
+[node name="Shoppe" parent="." instance=ExtResource("1_7uyrq")]
+position = Vector2(1154, 51)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_left = 1.0
@@ -51,6 +58,7 @@ offset_left = 1064.0
 offset_top = 8.0
 offset_right = 1145.0
 offset_bottom = 44.0
+toggle_mode = true
 text = "SHOP"
 
 [node name="Another" type="Button" parent="CanvasLayer"]
@@ -89,3 +97,9 @@ theme_override_constants/separation = 40
 layout_mode = 2
 
 [connection signal="pressed" from="CanvasLayer/Another" to="CanvasLayer/Another" method="_on_pressed"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 360)
+
+[connection signal="pressed" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_pressed"]
+[connection signal="toggled" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_toggled"]
