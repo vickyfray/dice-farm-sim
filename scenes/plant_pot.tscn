@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm27f41afdxil"]
+[gd_scene load_steps=6 format=3 uid="uid://cm27f41afdxil"]
 
 [ext_resource type="PackedScene" uid="uid://bbsg3vft4xsbj" path="res://scenes/dice.tscn" id="1_jo4ri"]
 [ext_resource type="Texture2D" uid="uid://dy511dfwq2iq1" path="res://assets/images/pot.png" id="1_ntgyw"]
-[ext_resource type="Script" path="res://scenes/plant_button.gd" id="4_m7b10"]
+[ext_resource type="Script" path="res://scripts/pot_button.gd" id="3_i6rpj"]
+[ext_resource type="Script" path="res://scripts/plant_button.gd" id="4_m7b10"]
 
 [sub_resource type="Theme" id="Theme_vp2dj"]
 
@@ -30,6 +31,7 @@ offset_top = 425.0
 offset_right = 149.0
 offset_bottom = 548.0
 texture_normal = ExtResource("1_ntgyw")
+script = ExtResource("3_i6rpj")
 
 [node name="PlantButton" type="TextureButton" parent="."]
 layout_mode = 0

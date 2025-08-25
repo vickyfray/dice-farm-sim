@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ofubvak5x2sp" path="res://assets/images/backdrop.png" id="1_888q2"]
 [ext_resource type="Texture2D" uid="uid://cfyelivq48vhv" path="res://assets/images/top-bar.png" id="2_cdo5m"]
-[ext_resource type="Script" path="res://scenes/another.gd" id="3_14bsv"]
+[ext_resource type="Script" path="res://scripts/another.gd" id="3_14bsv"]
 [ext_resource type="PackedScene" uid="uid://cm27f41afdxil" path="res://scenes/plant_pot.tscn" id="3_huqx6"]
 
 [node name="Main" type="Node2D"]
