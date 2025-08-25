@@ -1,5 +1,14 @@
 extends TextureButton
 
+var cursor_watering = preload("res://assets/images/cursor-watering.png")
+var cursor_shears = preload("res://assets/images/cursor-shears.png")
+
+func _on_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(cursor_watering, Input.CURSOR_ARROW, Vector2(54,54))
+
+func _on_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(null)
+
 signal state_changed(new_number: int)
 
 var stages: Array = [] # { number = int, texture = Texture2D }
