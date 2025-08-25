@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://mqepdpvjcqva"]
+[gd_scene load_steps=3 format=3 uid="uid://bris5qf7lrbyo"]
 
 [ext_resource type="Script" path="res://scripts/shoppe.gd" id="1_75yer"]
 [ext_resource type="Texture2D" uid="uid://bpr576nmh7oop" path="res://assets/woodpanel.jpg" id="1_dltjf"]
@@ -115,7 +115,7 @@ theme_override_font_sizes/font_size = 25
 text = "10gp"
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items"]
+[node name="BuyItem1" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items"]
 custom_minimum_size = Vector2(125, 0)
 layout_mode = 2
 text = "Buy!"
@@ -270,210 +270,11 @@ layout_mode = 2
 size_flags_vertical = 4
 text = "Buy!"
 
-[node name="Items8" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items8"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Item3"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items8"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "10gp"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items8"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-size_flags_vertical = 4
-text = "Buy!"
-
-[node name="Items9" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items9"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Item3"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items9"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "10gp"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items9"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-size_flags_vertical = 4
-text = "Buy!"
-
-[node name="Items10" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items10"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Item3"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items10"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "10gp"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items10"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-size_flags_vertical = 4
-text = "Buy!"
-
-[node name="Items11" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items11"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Item3"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items11"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "10gp"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items11"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-size_flags_vertical = 4
-text = "Buy!"
-
-[node name="Items12" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items12"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Item3"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items12"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "10gp"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items12"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-size_flags_vertical = 4
-text = "Buy!"
-
-[node name="Items13" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items13"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Item3"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items13"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "10gp"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items13"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-size_flags_vertical = 4
-text = "Buy!"
-
-[node name="Items14" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items14"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Item3"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items14"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "10gp"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items14"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-size_flags_vertical = 4
-text = "Buy!"
-
-[node name="Items15" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items15"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Item3"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items15"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "10gp"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items15"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-size_flags_vertical = 4
-text = "Buy!"
-
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 35)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Back to plants"
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items/BuyItem1" to="." method="_on_buy_item_1_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

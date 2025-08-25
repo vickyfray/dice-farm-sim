@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	$CanvasLayer/CoinCount.text = str(Globals.currency)
 
 
 func _on_shop_button_toggled(toggled_on):
@@ -20,3 +20,7 @@ func _on_shop_button_toggled(toggled_on):
 		print("shop closed")
 		$Camera2D.position = Vector2(580,360)
 		shopopen  = false
+
+
+func _on_give_money_pressed():
+	Globals.currency +=10
