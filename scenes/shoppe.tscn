@@ -10,7 +10,7 @@ script = ExtResource("1_75yer")
 modulate = Color(0.341176, 0.427451, 0.541176, 1)
 offset_left = 3.0
 offset_right = 495.0
-offset_bottom = 722.0
+offset_bottom = 679.0
 texture = ExtResource("1_dltjf")
 stretch_mode = 1
 
@@ -19,7 +19,7 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 503.0
-offset_bottom = 719.0
+offset_bottom = 667.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3

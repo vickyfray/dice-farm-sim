@@ -9,7 +9,7 @@
 script = ExtResource("1_gwtfa")
 
 [node name="Shoppe" parent="." instance=ExtResource("1_7uyrq")]
-position = Vector2(1150, 0)
+position = Vector2(1154, 51)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -56,9 +56,11 @@ offset_left = 1064.0
 offset_top = 8.0
 offset_right = 1145.0
 offset_bottom = 44.0
+toggle_mode = true
 text = "SHOP"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 360)
 
 [connection signal="pressed" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_pressed"]
+[connection signal="toggled" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_toggled"]
