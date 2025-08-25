@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmeg5jr17f53y"
-path="res://.godot/imported/plant-stage7.png-54ce6a3cb3e3d2c0833c18134a580a64.ctex"
+uid="uid://pyvckloh1k7a"
+path="res://.godot/imported/plant-d1.png-d7ad353319e29484debf267fbe427c71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/plant-stage7.png"
-dest_files=["res://.godot/imported/plant-stage7.png-54ce6a3cb3e3d2c0833c18134a580a64.ctex"]
+source_file="res://assets/images/plant-d1.png"
+dest_files=["res://.godot/imported/plant-d1.png-d7ad353319e29484debf267fbe427c71.ctex"]
 
 [params]
 
