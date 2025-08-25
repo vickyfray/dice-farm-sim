@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cab6egd47js7q"]
 
-[ext_resource type="PackedScene" path="res://scenes/shoppe.tscn" id="1_7uyrq"]
+[ext_resource type="PackedScene" uid="uid://bris5qf7lrbyo" path="res://scenes/shoppe.tscn" id="1_7uyrq"]
 [ext_resource type="Texture2D" uid="uid://ofubvak5x2sp" path="res://assets/images/backdrop.png" id="1_888q2"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_gwtfa"]
 [ext_resource type="Texture2D" uid="uid://cfyelivq48vhv" path="res://assets/images/top-bar.png" id="2_cdo5m"]
@@ -99,6 +99,17 @@ layout_mode = 2
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 360)
 
+[node name="DevStuff" type="Node2D" parent="."]
+visible = false
+
+[node name="GiveMoney" type="Button" parent="DevStuff"]
+offset_left = 933.0
+offset_top = 73.0
+offset_right = 1116.0
+offset_bottom = 125.0
+text = "Give Money"
+
 [connection signal="pressed" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_pressed"]
 [connection signal="toggled" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_toggled"]
 [connection signal="pressed" from="CanvasLayer/Another" to="CanvasLayer/Another" method="_on_pressed"]
+[connection signal="pressed" from="DevStuff/GiveMoney" to="." method="_on_give_money_pressed"]
