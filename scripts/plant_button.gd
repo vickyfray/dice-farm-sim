@@ -19,10 +19,6 @@ var stages = [
 		{ "number": 20, "texture": load("res://assets/images/plant-d20.png") },
 	]
 
-func _ready() -> void:
-	pass
-	# update_texture()
-
 func _on_pressed() -> void:
 	harvest()
 	
@@ -48,10 +44,6 @@ func update_texture() -> void:
 	var stage = stages[get_parent().stage]
 	texture_normal = stage.texture
 	size = stage.texture.get_size()
-	emit_signal("state_changed", stage.number)
-
-func get_state_number() -> int:
-	return stages[get_parent().stage].number
 
 func set_state(value: int) -> void:
 	for i in stages.size():
@@ -59,6 +51,9 @@ func set_state(value: int) -> void:
 			get_parent().stage = i
 			update_texture()
 			return
+
+func _on_plant_pot_stage_changed(planted: int) -> void:
+	update_texture()
 
 # temporary grow button
 func _on_button_pressed() -> void:
@@ -69,6 +64,3 @@ func _on_button_pressed() -> void:
 			grow()
 		else: 
 			print('plant a seed first!')
-
-func _on_plant_pot_stage_changed(planted: int) -> void:
-	update_texture()
