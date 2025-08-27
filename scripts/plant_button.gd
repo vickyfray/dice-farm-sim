@@ -7,7 +7,7 @@ extends TextureButton
 var cursor_shears = preload("res://assets/images/cursor-shears.png")
 func _on_mouse_entered() -> void:
 	if get_parent().stage > 1:
-		Input.set_custom_mouse_cursor(cursor_shears, Input.CURSOR_ARROW, Vector2(0,0))
+		Input.set_custom_mouse_cursor(cursor_shears, Input.CURSOR_ARROW, Vector2(3,0))
 func _on_mouse_exited() -> void:
 	Input.set_custom_mouse_cursor(null)
 
