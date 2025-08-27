@@ -2,7 +2,7 @@ extends Label
 
 var rolling := false
 var last_number: int = -1 
-var max_val := 8
+var max_val := 1
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_STOP # makes the label clickable
@@ -11,7 +11,7 @@ func _ready() -> void:
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		if not rolling:
+		if max_val > 1 and not rolling:
 			start_roll()
 
 func start_roll() -> void:
