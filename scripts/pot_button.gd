@@ -13,9 +13,9 @@ func _on_mouse_entered() -> void:
 	print('planted? ', planted)
 	if !get_parent().fully_grown:
 		if !planted:
-			Input.set_custom_mouse_cursor(cursor_plant, Input.CURSOR_ARROW, Vector2(54,54))
+			Input.set_custom_mouse_cursor(cursor_plant, Input.CURSOR_ARROW, Vector2(20,20))
 		elif !watered:
-			Input.set_custom_mouse_cursor(cursor_watering, Input.CURSOR_ARROW, Vector2(54,54))
+			Input.set_custom_mouse_cursor(cursor_watering, Input.CURSOR_ARROW, Vector2(0,40))
 func _on_mouse_exited() -> void:
 	Input.set_custom_mouse_cursor(null)
 
@@ -25,8 +25,10 @@ func _on_pressed() -> void:
 	var watered = get_parent().watered
 	if !get_parent().fully_grown:
 		if !planted:
-			get_parent().stage = 1
-			Input.set_custom_mouse_cursor(cursor_watering, Input.CURSOR_ARROW, Vector2(54,54))
+			if Globals.currency >= 1:
+				Globals.currency -= 1
+				get_parent().stage = 1
+				Input.set_custom_mouse_cursor(cursor_watering, Input.CURSOR_ARROW, Vector2(0,40))
 		elif !watered:
 			get_parent().watered = true
 			Input.set_custom_mouse_cursor(null)

@@ -91,12 +91,9 @@ theme_override_constants/separation = 30
 
 [node name="PlantPot" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
 layout_mode = 2
-
-[node name="PlantPot2" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
-layout_mode = 2
+stage = 1
 
 [node name="DevStuff" type="Node2D" parent="."]
-visible = false
 
 [node name="GiveMoney" type="Button" parent="DevStuff"]
 offset_left = 933.0

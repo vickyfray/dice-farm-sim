@@ -7,7 +7,7 @@ extends TextureButton
 var cursor_shears = preload("res://assets/images/cursor-shears.png")
 func _on_mouse_entered() -> void:
 	if get_parent().stage > 1:
-		Input.set_custom_mouse_cursor(cursor_shears, Input.CURSOR_ARROW, Vector2(54,54))
+		Input.set_custom_mouse_cursor(cursor_shears, Input.CURSOR_ARROW, Vector2(0,0))
 func _on_mouse_exited() -> void:
 	Input.set_custom_mouse_cursor(null)
 
@@ -30,6 +30,11 @@ func harvest() -> void:
 	
 func roll_dice() -> void:
 	print('roll a d', stages[get_parent().stage].number)
+	# instanciate the dice as a new child scene
+	var new_dice = dice.instantiate()
+	$DiceMarker.add_child(new_dice)
+	new_dice.max_val = stages[get_parent().stage].number
+	new_dice.start_roll()
 	
 func grow() -> void:
 	if(get_parent().watered):

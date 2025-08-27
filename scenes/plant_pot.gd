@@ -8,7 +8,7 @@ var watered: bool = false:
 			watered_changed.emit(value)
 
 signal stage_changed(planted: int)
-var stage: int  = 0:
+@export var stage: int  = 0:
 	set(value):
 		if stage != value:
 			stage = value
