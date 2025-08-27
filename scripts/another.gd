@@ -12,4 +12,6 @@ func _on_pressed() -> void:
 	
 	if hbox.get_child_count() < 6:
 		# Add plant pot as a child
-		hbox.add_child(plant_pot)
+		if Globals.currency >= 30:
+			Globals.currency -= 30
+			hbox.add_child(plant_pot)

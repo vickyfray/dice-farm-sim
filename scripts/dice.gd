@@ -35,6 +35,10 @@ func start_roll() -> void:
 	text = str(final_num)
 	last_number = final_num
 	rolling = false
+	await get_tree().create_timer(1.0).timeout
+	Globals.currency += final_num
+	print("added to global currency: ", final_num)
+	get_parent().remove_child(self)
 
 func _roll_non_repeating(max_val: int) -> int:
 	var num: int = randi_range(1, max_val)

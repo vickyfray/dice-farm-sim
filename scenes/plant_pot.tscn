@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cm27f41afdxil"]
 
-[ext_resource type="PackedScene" uid="uid://bbsg3vft4xsbj" path="res://scenes/dice.tscn" id="1_jo4ri"]
 [ext_resource type="Texture2D" uid="uid://dy511dfwq2iq1" path="res://assets/images/pot.png" id="1_ntgyw"]
+[ext_resource type="Script" path="res://scenes/plant_pot.gd" id="1_t700j"]
 [ext_resource type="Script" path="res://scripts/pot_button.gd" id="3_i6rpj"]
 [ext_resource type="Script" path="res://scripts/plant_button.gd" id="4_m7b10"]
 
@@ -14,15 +14,9 @@ offset_right = 150.0
 offset_bottom = 550.0
 theme = SubResource("Theme_vp2dj")
 theme_type_variation = &"FlatButton"
+script = ExtResource("1_t700j")
 metadata/_edit_vertical_guides_ = [150.0]
 metadata/_edit_horizontal_guides_ = [551.0]
-
-[node name="Dice" parent="." instance=ExtResource("1_jo4ri")]
-layout_mode = 0
-offset_left = 52.0
-offset_top = 0.0
-offset_right = 98.0
-offset_bottom = 55.0
 
 [node name="PotButton" type="TextureButton" parent="."]
 layout_mode = 0
@@ -41,9 +35,23 @@ offset_right = 143.0
 offset_bottom = 448.0
 script = ExtResource("4_m7b10")
 
+[node name="Button" type="Button" parent="PlantButton"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 443.0
+offset_right = 104.0
+offset_bottom = 474.0
+text = "Grow!"
+
+[node name="DiceMarker" type="Marker2D" parent="PlantButton"]
+position = Vector2(46, 123)
+
+[connection signal="stage_changed" from="." to="PlantButton" method="_on_plant_pot_stage_changed"]
+[connection signal="watered_changed" from="." to="PotButton" method="_on_plant_pot_watered_changed"]
 [connection signal="mouse_entered" from="PotButton" to="PotButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PotButton" to="PotButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="PotButton" to="PotButton" method="_on_pressed"]
 [connection signal="mouse_entered" from="PlantButton" to="PlantButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PlantButton" to="PlantButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="PlantButton" to="PlantButton" method="_on_pressed"]
-[connection signal="state_changed" from="PlantButton" to="Dice" method="_on_plant_button_state_changed"]
+[connection signal="pressed" from="PlantButton/Button" to="PlantButton" method="_on_button_pressed"]
