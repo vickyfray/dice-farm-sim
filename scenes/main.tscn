@@ -70,30 +70,30 @@ theme_override_font_sizes/font_size = 13
 text = "another!"
 script = ExtResource("3_14bsv")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 360)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(20, 200)
 layout_direction = 2
 offset_left = 1.0
 offset_top = 111.0
-offset_right = 251.0
+offset_right = 431.0
 offset_bottom = 551.0
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_right = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 30
 
-[node name="PlantPot" parent="CanvasLayer/MarginContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
+[node name="PlantPot" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
 layout_mode = 2
 
-[node name="PlantPot2" parent="CanvasLayer/MarginContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
+[node name="PlantPot2" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
 layout_mode = 2
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(575, 360)
 
 [node name="DevStuff" type="Node2D" parent="."]
 visible = false
