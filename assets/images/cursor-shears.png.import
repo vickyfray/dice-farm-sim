@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmeg5jr17f53y"
-path="res://.godot/imported/plant-stage7.png-54ce6a3cb3e3d2c0833c18134a580a64.ctex"
+uid="uid://c6ejoif1kgr6r"
+path="res://.godot/imported/cursor-shears.png-9e5ae91526792d89fee729a59a2491eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/plant-stage7.png"
-dest_files=["res://.godot/imported/plant-stage7.png-54ce6a3cb3e3d2c0833c18134a580a64.ctex"]
+source_file="res://assets/images/cursor-shears.png"
+dest_files=["res://.godot/imported/cursor-shears.png-9e5ae91526792d89fee729a59a2491eb.ctex"]
 
 [params]
 

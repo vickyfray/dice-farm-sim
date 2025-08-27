@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cab6egd47js7q"]
+[gd_scene load_steps=7 format=3 uid="uid://cab6egd47js7q"]
 
 [ext_resource type="PackedScene" uid="uid://bris5qf7lrbyo" path="res://scenes/shoppe.tscn" id="1_7uyrq"]
 [ext_resource type="Texture2D" uid="uid://ofubvak5x2sp" path="res://assets/images/backdrop.png" id="1_888q2"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_gwtfa"]
 [ext_resource type="Texture2D" uid="uid://cfyelivq48vhv" path="res://assets/images/top-bar.png" id="2_cdo5m"]
+[ext_resource type="Script" path="res://scripts/another.gd" id="3_14bsv"]
+[ext_resource type="PackedScene" uid="uid://cm27f41afdxil" path="res://scenes/plant_pot.tscn" id="3_huqx6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_gwtfa")
@@ -59,6 +61,37 @@ offset_bottom = 44.0
 toggle_mode = true
 text = "SHOP"
 
+[node name="Another" type="Button" parent="CanvasLayer"]
+offset_left = 148.0
+offset_top = 14.0
+offset_right = 216.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 13
+text = "another!"
+script = ExtResource("3_14bsv")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(20, 200)
+layout_direction = 2
+offset_left = 1.0
+offset_top = 111.0
+offset_right = 251.0
+offset_bottom = 551.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 30
+
+[node name="PlantPot" parent="CanvasLayer/MarginContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
+layout_mode = 2
+
+[node name="PlantPot2" parent="CanvasLayer/MarginContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
+layout_mode = 2
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 360)
 
@@ -74,4 +107,5 @@ text = "Give Money"
 
 [connection signal="pressed" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_pressed"]
 [connection signal="toggled" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_toggled"]
+[connection signal="pressed" from="CanvasLayer/Another" to="CanvasLayer/Another" method="_on_pressed"]
 [connection signal="pressed" from="DevStuff/GiveMoney" to="." method="_on_give_money_pressed"]
