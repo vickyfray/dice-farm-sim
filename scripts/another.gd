@@ -8,7 +8,7 @@ func _on_pressed() -> void:
 	var plant_pot = plant_pot_scene.instantiate()
 
 	# Get the HBoxContainer
-	var hbox = get_parent().get_node("MarginContainer/HBoxContainer")
+	var hbox = $"../../MarginContainer/HBoxContainer"
 	
 	if hbox.get_child_count() < 6:
 		# Add plant pot as a child
