@@ -37,11 +37,11 @@ script = ExtResource("4_m7b10")
 
 [node name="Button" type="Button" parent="PlantButton"]
 layout_mode = 0
-offset_left = 46.0
+offset_left = 36.0
 offset_top = 443.0
-offset_right = 98.0
+offset_right = 104.0
 offset_bottom = 474.0
-text = "grow!"
+text = "Grow!"
 
 [node name="DiceMarker" type="Marker2D" parent="PlantButton"]
 position = Vector2(46, 123)

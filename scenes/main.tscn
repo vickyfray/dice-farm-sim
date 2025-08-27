@@ -61,15 +61,6 @@ offset_bottom = 44.0
 toggle_mode = true
 text = "SHOP"
 
-[node name="Another" type="Button" parent="CanvasLayer"]
-offset_left = 148.0
-offset_top = 14.0
-offset_right = 216.0
-offset_bottom = 40.0
-theme_override_font_sizes/font_size = 13
-text = "another!"
-script = ExtResource("3_14bsv")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(575, 360)
 
@@ -95,14 +86,22 @@ stage = 1
 
 [node name="DevStuff" type="Node2D" parent="."]
 
+[node name="Another" type="Button" parent="DevStuff"]
+offset_left = 31.0
+offset_top = 60.0
+offset_right = 120.0
+offset_bottom = 93.0
+text = "+ Pot (30)"
+script = ExtResource("3_14bsv")
+
 [node name="GiveMoney" type="Button" parent="DevStuff"]
-offset_left = 933.0
-offset_top = 73.0
-offset_right = 1116.0
-offset_bottom = 125.0
-text = "Give Money"
+offset_left = 977.0
+offset_top = 60.0
+offset_right = 1059.0
+offset_bottom = 95.0
+text = "+ Money"
 
 [connection signal="pressed" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_pressed"]
 [connection signal="toggled" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_toggled"]
-[connection signal="pressed" from="CanvasLayer/Another" to="CanvasLayer/Another" method="_on_pressed"]
+[connection signal="pressed" from="DevStuff/Another" to="DevStuff/Another" method="_on_pressed"]
 [connection signal="pressed" from="DevStuff/GiveMoney" to="." method="_on_give_money_pressed"]
