@@ -9,8 +9,8 @@ script = ExtResource("1_75yer")
 [node name="BG" type="TextureRect" parent="."]
 modulate = Color(0.341176, 0.427451, 0.541176, 1)
 offset_left = 3.0
-offset_right = 495.0
-offset_bottom = 679.0
+offset_right = 503.0
+offset_bottom = 680.0
 texture = ExtResource("1_dltjf")
 stretch_mode = 1
 
