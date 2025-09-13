@@ -13,9 +13,6 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_gwtfa")
 
-[node name="Shoppe" parent="." instance=ExtResource("1_7uyrq")]
-position = Vector2(1154, 51)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
@@ -112,6 +109,7 @@ stage = 1
 [node name="DevStuff" type="Node2D" parent="."]
 
 [node name="Another" type="Button" parent="DevStuff"]
+visible = false
 offset_left = 31.0
 offset_top = 60.0
 offset_right = 120.0
@@ -125,6 +123,9 @@ offset_top = 60.0
 offset_right = 1059.0
 offset_bottom = 95.0
 text = "+ Money"
+
+[node name="Shoppe" parent="." instance=ExtResource("1_7uyrq")]
+position = Vector2(1154, 51)
 
 [connection signal="pressed" from="CanvasLayer/TopBar/ShopButton" to="." method="_on_shop_button_pressed"]
 [connection signal="toggled" from="CanvasLayer/TopBar/ShopButton" to="." method="_on_shop_button_toggled"]

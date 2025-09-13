@@ -1,10 +1,9 @@
 extends Node2D
 
-
+@onready var plant_pot_scene: PackedScene = preload("res://scenes/plant_pot.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -16,10 +15,15 @@ func _on_button_pressed():
 
 
 func _on_buy_item_1_pressed():
-	if Globals.currency >=10:
-		Globals.currency -=10
-		$MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items/BuyItem1.disabled = true
-		$MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items/BuyItem1.text = "Owned"
-		print("you bought the thing")
-	else:
-		print("you can't afford this")
+	plantpotpurchase()
+
+func plantpotpurchase():
+	var main = self.get_parent()
+	var hbox = main.get_node("MarginContainer/HBoxContainer")
+	var plant_pot = plant_pot_scene.instantiate()
+	
+	if hbox.get_child_count() < 6:
+		# Add plant pot as a child
+		if Globals.currency >= 30:
+			Globals.currency -= 30
+			hbox.add_child(plant_pot)
