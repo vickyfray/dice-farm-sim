@@ -14,6 +14,13 @@ offset_bottom = 680.0
 texture = ExtResource("1_dltjf")
 stretch_mode = 1
 
+[node name="TextureRect" type="TextureRect" parent="BG"]
+visible = false
+layout_mode = 0
+offset_left = -1096.0
+offset_right = -2.0
+offset_bottom = 720.0
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -105,14 +112,14 @@ alignment = 1
 custom_minimum_size = Vector2(125, 35)
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Item1"
+text = "Plant Pot"
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items"]
 custom_minimum_size = Vector2(125, 35)
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "10gp"
+text = "30gp"
 vertical_alignment = 1
 
 [node name="BuyItem1" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items"]
