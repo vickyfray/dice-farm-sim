@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cab6egd47js7q"]
+[gd_scene load_steps=11 format=3 uid="uid://cab6egd47js7q"]
 
 [ext_resource type="PackedScene" uid="uid://bris5qf7lrbyo" path="res://scenes/shoppe.tscn" id="1_7uyrq"]
 [ext_resource type="Texture2D" uid="uid://ofubvak5x2sp" path="res://assets/images/backdrop.png" id="1_888q2"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://cfyelivq48vhv" path="res://assets/images/top-bar.png" id="2_cdo5m"]
 [ext_resource type="Script" path="res://scripts/another.gd" id="3_14bsv"]
 [ext_resource type="PackedScene" uid="uid://cm27f41afdxil" path="res://scenes/plant_pot.tscn" id="3_huqx6"]
+[ext_resource type="Texture2D" uid="uid://dr5w1ct3yro3l" path="res://assets/images/top-bar2.png" id="4_uisx5"]
+[ext_resource type="Texture2D" uid="uid://d4bw6hpcb01re" path="res://assets/images/timetracker-under.png" id="6_5qm76"]
+[ext_resource type="Texture2D" uid="uid://djo4ija0xcgap" path="res://assets/images/Sun.png" id="6_s7o8f"]
+[ext_resource type="Texture2D" uid="uid://j5d5qj1e0458" path="res://assets/images/timetracker-over.png" id="7_pnuwh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_gwtfa")
@@ -16,7 +20,7 @@ position = Vector2(1154, 51)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="BG" type="TextureRect" parent="CanvasLayer"]
 offset_left = 1.0
 offset_top = 55.0
 offset_right = 1157.0
@@ -24,40 +28,66 @@ offset_bottom = 723.0
 texture = ExtResource("1_888q2")
 stretch_mode = 1
 
-[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer"]
+[node name="TopBarBG" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1156.0
+offset_bottom = 55.0
+texture = ExtResource("4_uisx5")
+
+[node name="TopBar33" type="Sprite2D" parent="CanvasLayer"]
+visible = false
 position = Vector2(579, 28)
 texture = ExtResource("2_cdo5m")
 
-[node name="Day" type="Label" parent="CanvasLayer"]
-offset_left = 68.0
-offset_top = 12.0
-offset_right = 111.0
-offset_bottom = 40.0
+[node name="TopBar" type="Node2D" parent="CanvasLayer"]
+position = Vector2(579, 28)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/TopBar"]
+offset_left = -354.0
+offset_top = -24.0
+offset_right = 311.0
+offset_bottom = 23.0
+min_value = 1.0
+value = 1.0
+texture_under = ExtResource("6_5qm76")
+texture_progress = ExtResource("7_pnuwh")
+
+[node name="SunLoading" type="Sprite2D" parent="CanvasLayer/TopBar/TextureProgressBar"]
+texture_filter = 1
+position = Vector2(650, 0)
+texture = ExtResource("6_s7o8f")
+centered = false
+offset = Vector2(-20, 0)
+
+[node name="Day" type="Label" parent="CanvasLayer/TopBar"]
+offset_left = -511.0
+offset_top = -16.0
+offset_right = -468.0
+offset_bottom = 12.0
 theme_override_font_sizes/font_size = 20
 text = "Day"
 
-[node name="DayCount" type="Label" parent="CanvasLayer"]
-offset_left = 112.0
-offset_top = 12.0
-offset_right = 173.0
-offset_bottom = 40.0
+[node name="DayCount" type="Label" parent="CanvasLayer/TopBar"]
+offset_left = -467.0
+offset_top = -16.0
+offset_right = -406.0
+offset_bottom = 12.0
 theme_override_font_sizes/font_size = 20
 text = "1"
 
-[node name="CoinCount" type="Label" parent="CanvasLayer"]
-offset_left = 914.0
-offset_top = 13.0
-offset_right = 994.0
-offset_bottom = 41.0
+[node name="CoinCount" type="Label" parent="CanvasLayer/TopBar"]
+offset_left = 335.0
+offset_top = -15.0
+offset_right = 415.0
+offset_bottom = 13.0
 theme_override_font_sizes/font_size = 20
 text = "1"
 horizontal_alignment = 2
 
-[node name="ShopButton" type="Button" parent="CanvasLayer"]
-offset_left = 1064.0
-offset_top = 8.0
-offset_right = 1145.0
-offset_bottom = 44.0
+[node name="ShopButton" type="Button" parent="CanvasLayer/TopBar"]
+offset_left = 485.0
+offset_top = -20.0
+offset_right = 566.0
+offset_bottom = 16.0
 toggle_mode = true
 text = "SHOP"
 
@@ -102,7 +132,7 @@ offset_right = 1059.0
 offset_bottom = 95.0
 text = "+ Money"
 
-[connection signal="pressed" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_pressed"]
-[connection signal="toggled" from="CanvasLayer/ShopButton" to="." method="_on_shop_button_toggled"]
+[connection signal="pressed" from="CanvasLayer/TopBar/ShopButton" to="." method="_on_shop_button_pressed"]
+[connection signal="toggled" from="CanvasLayer/TopBar/ShopButton" to="." method="_on_shop_button_toggled"]
 [connection signal="pressed" from="DevStuff/Another" to="DevStuff/Another" method="_on_pressed"]
 [connection signal="pressed" from="DevStuff/GiveMoney" to="." method="_on_give_money_pressed"]

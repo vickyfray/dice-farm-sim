@@ -11,14 +11,16 @@ config_version=5
 [application]
 
 config/name="dice-farm-sim"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
 [autoload]
 
-Globals="*res://scripts/globals.gd"
+Globals="*res://scenes/globals.tscn"
 
 [display]
 
 window/size/viewport_width=1156
 window/size/viewport_height=720
+window/stretch/mode="viewport"
