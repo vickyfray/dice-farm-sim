@@ -45,7 +45,7 @@ func grow() -> void:
 		get_parent().time_last_watered = -1
 		
 func _process(delta):
-	if(get_parent().time_last_watered > 0):
+	if(get_parent().time_last_watered > -1):
 		var time_since_last_watered = Globals.game_time - get_parent().time_last_watered
 		if(time_since_last_watered >= 3): # if it takes 3 days to grow
 			grow()
