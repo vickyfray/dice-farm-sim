@@ -1,6 +1,7 @@
 extends TextureRect
 
 signal watered_changed(watered: bool)
+var time_last_watered: int = -1
 var watered: bool = false:
 	set(value):
 		if watered != value:

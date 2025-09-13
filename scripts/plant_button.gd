@@ -42,8 +42,13 @@ func grow() -> void:
 		if get_parent().stage == stages.size()-1:
 			get_parent().fully_grown = true
 		get_parent().watered = false
-	else:
-		print('cant grow without water!')
+		get_parent().time_last_watered = -1
+		
+func _process(delta):
+	if(get_parent().time_last_watered > 0):
+		var time_since_last_watered = Globals.game_time - get_parent().time_last_watered
+		if(time_since_last_watered >= 3): # if it takes 3 days to grow
+			grow()
 
 func update_texture() -> void:
 	var stage = stages[get_parent().stage]

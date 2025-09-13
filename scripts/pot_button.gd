@@ -30,6 +30,10 @@ func _on_pressed() -> void:
 				get_parent().stage = 1
 				Input.set_custom_mouse_cursor(cursor_watering, Input.CURSOR_ARROW, Vector2(0,40))
 		elif !watered:
+			# water the plant
+			print("the time this plant was last watered was ", get_parent().time_last_watered)
+			get_parent().time_last_watered = Globals.game_time
+			print("setting time_last_watered to be ", get_parent().time_last_watered)
 			get_parent().watered = true
 			Input.set_custom_mouse_cursor(null)
 
