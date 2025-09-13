@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://cab6egd47js7q"]
+[gd_scene load_steps=10 format=3 uid="uid://cab6egd47js7q"]
 
 [ext_resource type="PackedScene" uid="uid://bris5qf7lrbyo" path="res://scenes/shoppe.tscn" id="1_7uyrq"]
 [ext_resource type="Texture2D" uid="uid://ofubvak5x2sp" path="res://assets/images/backdrop.png" id="1_888q2"]
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_gwtfa"]
-[ext_resource type="Texture2D" uid="uid://cfyelivq48vhv" path="res://assets/images/top-bar.png" id="2_cdo5m"]
 [ext_resource type="Script" path="res://scripts/another.gd" id="3_14bsv"]
 [ext_resource type="PackedScene" uid="uid://cm27f41afdxil" path="res://scenes/plant_pot.tscn" id="3_huqx6"]
 [ext_resource type="Texture2D" uid="uid://dr5w1ct3yro3l" path="res://assets/images/top-bar2.png" id="4_uisx5"]
@@ -32,11 +31,6 @@ stretch_mode = 1
 offset_right = 1156.0
 offset_bottom = 55.0
 texture = ExtResource("4_uisx5")
-
-[node name="TopBar33" type="Sprite2D" parent="CanvasLayer"]
-visible = false
-position = Vector2(579, 28)
-texture = ExtResource("2_cdo5m")
 
 [node name="TopBar" type="Node2D" parent="CanvasLayer"]
 position = Vector2(579, 28)

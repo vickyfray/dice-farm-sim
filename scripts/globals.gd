@@ -17,4 +17,3 @@ func _process(delta):
 
 func _on_tick_timer_timeout():
 	game_time +=1
-	print(game_time)
