@@ -69,8 +69,8 @@ custom_minimum_size = Vector2(20, 200)
 layout_direction = 2
 offset_left = 1.0
 offset_top = 111.0
-offset_right = 431.0
-offset_bottom = 551.0
+offset_right = 1146.0
+offset_bottom = 709.0
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_right = 50
 
@@ -79,6 +79,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 30
+alignment = 1
 
 [node name="PlantPot" parent="MarginContainer/HBoxContainer" instance=ExtResource("3_huqx6")]
 layout_mode = 2
