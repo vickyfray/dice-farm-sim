@@ -270,11 +270,4 @@ layout_mode = 2
 size_flags_vertical = 4
 text = "Buy!"
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 35)
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Back to plants"
-
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items/BuyItem1" to="." method="_on_buy_item_1_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
