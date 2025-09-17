@@ -27,3 +27,9 @@ func plantpotpurchase():
 		if Globals.currency >= 30:
 			Globals.currency -= 30
 			hbox.add_child(plant_pot)
+
+func _on_texture_button_pressed():
+	if Globals.shop_open == true:
+		Globals.shop_open = false
+	elif Globals.shop_open == false:
+		Globals.shop_open = true

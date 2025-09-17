@@ -14,7 +14,7 @@ offset_bottom = 680.0
 texture = ExtResource("1_dltjf")
 stretch_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="BG"]
+[node name="TextureButton" type="TextureButton" parent="BG"]
 visible = false
 layout_mode = 0
 offset_left = -1096.0
@@ -277,4 +277,5 @@ layout_mode = 2
 size_flags_vertical = 4
 text = "Buy!"
 
+[connection signal="pressed" from="BG/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ShopContents/ScrollContainer/HBoxContainer/VBoxContainer/Items/BuyItem1" to="." method="_on_buy_item_1_pressed"]

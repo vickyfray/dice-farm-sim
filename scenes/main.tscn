@@ -79,7 +79,6 @@ offset_left = 485.0
 offset_top = -20.0
 offset_right = 566.0
 offset_bottom = 16.0
-toggle_mode = true
 text = "SHOP"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -128,6 +127,5 @@ text = "+ Money"
 position = Vector2(1154, 51)
 
 [connection signal="pressed" from="CanvasLayer/TopBar/ShopButton" to="." method="_on_shop_button_pressed"]
-[connection signal="toggled" from="CanvasLayer/TopBar/ShopButton" to="." method="_on_shop_button_toggled"]
 [connection signal="pressed" from="DevStuff/Another" to="DevStuff/Another" method="_on_pressed"]
 [connection signal="pressed" from="DevStuff/GiveMoney" to="." method="_on_give_money_pressed"]
