@@ -15,7 +15,8 @@ var stages = [
 		{ "number": 0, "texture": load("res://assets/images/plant-d0.png"), "timetogrow":0 },
 		{ "number": 1, "texture": load("res://assets/images/plant-d1.png"), "timetogrow":4 },
 		{ "number": 4, "texture": load("res://assets/images/plant-d4.png"), "timetogrow":3 },
-		{ "number": 8, "texture": load("res://assets/images/plant-d8.png"), "timetogrow":8 },
+		{ "number": 8, "texture": load("res://assets/images/plant-d8.png"), "timetogrow":3 },
+		{ "number": 12, "texture": load("res://assets/images/plant-d12.png"), "timetogrow":3 },
 		{ "number": 20, "texture": load("res://assets/images/plant-d20.png"), "timetogrow":0 },
 	]
 
@@ -47,7 +48,7 @@ func grow() -> void:
 func _process(delta):
 	if(get_parent().time_last_watered > -1):
 		var time_since_last_watered = Globals.game_time - get_parent().time_last_watered
-		if(time_since_last_watered >= stages[get_parent().stage].timetogrow): # if it takes 3 days to grow
+		if(time_since_last_watered >= stages[get_parent().stage].timetogrow): 
 			print("plant took:" + str(time_since_last_watered) + " days to grow")
 			grow()
 
