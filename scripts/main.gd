@@ -41,7 +41,7 @@ func _on_shop_button_toggled(toggled_on):
 		$Shoppe/BG/TextureRect.visible = false
 
 func _on_give_money_pressed():
-	Globals.currency +=10
+	Globals.currency +=100
 
 
 func timercheck():
