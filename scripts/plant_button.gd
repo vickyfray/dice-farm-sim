@@ -12,11 +12,12 @@ func _on_mouse_exited() -> void:
 	Input.set_custom_mouse_cursor(null)
 
 var stages = [
-		{ "number": 0, "texture": load("res://assets/images/plant-d0.png") },
-		{ "number": 1, "texture": load("res://assets/images/plant-d1.png") },
-		{ "number": 4, "texture": load("res://assets/images/plant-d4.png") },
-		{ "number": 8, "texture": load("res://assets/images/plant-d8.png") },
-		{ "number": 20, "texture": load("res://assets/images/plant-d20.png") },
+		{ "number": 0, "texture": load("res://assets/images/plant-d0.png"), "timetogrow":0 },
+		{ "number": 1, "texture": load("res://assets/images/plant-d1.png"), "timetogrow":4 },
+		{ "number": 4, "texture": load("res://assets/images/plant-d4.png"), "timetogrow":3 },
+		{ "number": 8, "texture": load("res://assets/images/plant-d8.png"), "timetogrow":3 },
+		{ "number": 12, "texture": load("res://assets/images/plant-d12.png"), "timetogrow":3 },
+		{ "number": 20, "texture": load("res://assets/images/plant-d20.png"), "timetogrow":0 },
 	]
 
 func _on_pressed() -> void:
@@ -42,8 +43,14 @@ func grow() -> void:
 		if get_parent().stage == stages.size()-1:
 			get_parent().fully_grown = true
 		get_parent().watered = false
-	else:
-		print('cant grow without water!')
+		get_parent().time_last_watered = -1
+		
+func _process(delta):
+	if(get_parent().time_last_watered > -1):
+		var time_since_last_watered = Globals.game_time - get_parent().time_last_watered
+		if(time_since_last_watered >= stages[get_parent().stage].timetogrow): 
+			print("plant took:" + str(time_since_last_watered) + " days to grow")
+			grow()
 
 func update_texture() -> void:
 	var stage = stages[get_parent().stage]
