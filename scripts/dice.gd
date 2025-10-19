@@ -32,11 +32,14 @@ func start_roll() -> void:
 
 	# roll result 
 	var final_num := _roll_non_repeating(max_val)
-	text = str(final_num)
+	if Globals.dice_modifier >=1:
+		text = str(final_num)+" +"+str(Globals.dice_modifier)
+	else:
+		text = str(final_num)
 	last_number = final_num
 	rolling = false
 	await get_tree().create_timer(1.0).timeout
-	Globals.currency += final_num
+	Globals.currency += final_num + Globals.dice_modifier
 	print("added to global currency: ", final_num)
 	get_parent().remove_child(self)
 

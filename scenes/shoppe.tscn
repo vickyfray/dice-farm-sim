@@ -97,8 +97,7 @@ texture = ExtResource("7_owwd7")
 [node name="ContentsContainer" type="MarginContainer" parent="ShopContainer/TitleContents_VBox"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_right = 5
+theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 20
 
 [node name="ShopContents_Vbox" type="VBoxContainer" parent="ShopContainer/TitleContents_VBox/ContentsContainer"]
@@ -121,71 +120,17 @@ clip_children = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 25
+theme_override_constants/separation = 20
 
-[node name="Item1" type="HBoxContainer" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox"]
-visible = false
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/Item1"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Plant Pot"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/Item1"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "30gp"
-vertical_alignment = 1
-
-[node name="BuyItem1" type="Button" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/Item1"]
-visible = false
-custom_minimum_size = Vector2(125, 0)
-layout_mode = 2
-text = "Buy!"
-
-[node name="Item2" type="HBoxContainer" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox"]
-visible = false
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/Item2"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Example Item name is too long"
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="Label2" type="Label" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/Item2"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "10gp"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/Item2"]
-custom_minimum_size = Vector2(125, 35)
-layout_mode = 2
-size_flags_vertical = 4
-text = "Buy!"
-
-[node name="DropDownMenu" type="Control" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox"]
+[node name="DropDownMenu" type="VBoxContainer" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox"]
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_constants/separation = 10
 script = ExtResource("8_gql4k")
 
 [node name="Button" type="Button" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 50.0
-grow_horizontal = 2
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
 toggle_mode = true
 
 [node name="MarginContainer" type="MarginContainer" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/Button"]
@@ -207,16 +152,14 @@ texture = ExtResource("9_517tx")
 
 [node name="CollapseControl" type="Control" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu"]
 clip_contents = true
-anchors_preset = 0
-offset_top = 50.0
-offset_right = 388.0
-offset_bottom = 179.0
+layout_mode = 2
 
 [node name="ListContainer" type="MarginContainer" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 47.0
+offset_top = 2.0
+offset_bottom = 54.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 5
@@ -246,8 +189,69 @@ layout_mode = 2
 size_flags_horizontal = 10
 text = "Buy!"
 
+[node name="Button2" type="Button" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+toggle_mode = true
+
+[node name="MarginContainer" type="MarginContainer" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/Button2"]
+layout_mode = 0
+offset_right = 371.0
+offset_bottom = 50.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Label" type="Label" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/Button2/MarginContainer"]
+layout_mode = 2
+text = "Better Seeds"
+
+[node name="Chevron" type="TextureRect" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/Button2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("9_517tx")
+
+[node name="CollapseControl2" type="Control" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu"]
+clip_contents = true
+layout_mode = 2
+
+[node name="ListContainer" type="MarginContainer" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl2"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 47.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl2/ListContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl2/ListContainer/HBoxContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 15
+text = "Add +1 to all dice rolls for plants grown from these seeds. "
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl2/ListContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 15
+text = "100gp"
+
+[node name="BuyItem2" type="Button" parent="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl2/ListContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Buy!"
+
 [connection signal="pressed" from="BG/HideShopButton" to="." method="_on_texture_button_pressed"]
 [connection signal="animation_looped" from="ShopContainer/TitleContents_VBox/LilShopKeep" to="." method="_on_lil_shop_keep_animation_looped"]
-[connection signal="pressed" from="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/Item1/BuyItem1" to="." method="_on_buy_item_1_pressed"]
 [connection signal="toggled" from="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/Button" to="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu" method="_on_button_toggled"]
 [connection signal="pressed" from="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl/ListContainer/HBoxContainer/BuyItem1" to="." method="_on_buy_item_1_pressed"]
+[connection signal="toggled" from="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/Button2" to="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu" method="_on_button_2_toggled"]
+[connection signal="pressed" from="ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl2/ListContainer/HBoxContainer/BuyItem2" to="." method="_on_buy_item_2_pressed"]

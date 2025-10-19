@@ -2,28 +2,45 @@ extends Node2D
 
 @onready var plant_pot_scene: PackedScene = preload("res://scenes/plant_pot.tscn")
 var pot_price = 30
+var seed_upgrade_price = 50
+
 var shop_pos = 0
+var pot_num_purchased = 0
+var seed_upgrade_purchased = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	shop_pos = self.position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/Item1/Label2.text = (str(pot_price)+"gp")
+	priceupdates()
+	
 	var main = self.get_parent()
 	var hbox = main.get_node("MarginContainer/HBoxContainer") 
-	#pot_price = 30 + ((hbox.get_child_count()-1)*10)
 
-func _on_button_pressed():
-	pass # Replace with function body.
 
 
 func _on_buy_item_1_pressed():
 	plantpotpurchase()
 	purchasethanks()
 
+func _on_buy_item_2_pressed():
+	if Globals.currency >= seed_upgrade_price:
+		Globals.currency -= seed_upgrade_price
+		seed_upgrade_purchased +=1
+		Globals.dice_modifier +=1
+		purchasethanks()
+
+
 func purchasethanks():
 	$ShopContainer/TitleContents_VBox/LilShopKeep.play("thanks")
+
+func priceupdates():
+	pot_price = 30 + (pot_num_purchased*10)
+	$ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl/ListContainer/HBoxContainer/Label2.text = (str(pot_price)+"gp")
+	seed_upgrade_price = 50*(1+seed_upgrade_purchased)
+	$ShopContainer/TitleContents_VBox/ContentsContainer/ShopContents_Vbox/ItemsScrollContainer/ContentsContainer_Vbox/DropDownMenu/CollapseControl2/ListContainer/HBoxContainer/Label2.text = (str(seed_upgrade_price)+"gp")
+
 
 func plantpotpurchase():
 	var main = self.get_parent()
@@ -35,6 +52,8 @@ func plantpotpurchase():
 		if Globals.currency >= pot_price:
 			Globals.currency -= pot_price
 			hbox.add_child(plant_pot)
+
+	pot_num_purchased = hbox.get_child_count()-1
 
 func _on_texture_button_pressed():
 	print("shop should close")
